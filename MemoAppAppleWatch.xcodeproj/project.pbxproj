@@ -17,6 +17,12 @@
 		B544FB8A25E6773500E17A9F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544FB8925E6773500E17A9F /* ComplicationController.swift */; };
 		B544FB8C25E6773500E17A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FB8B25E6773500E17A9F /* Assets.xcassets */; };
 		B544FB8F25E6773500E17A9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FB8E25E6773500E17A9F /* Preview Assets.xcassets */; };
+		B544FBA425E677DB00E17A9F /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B544FBA225E677DB00E17A9F /* Task.xcdatamodeld */; };
+		B544FBAA25E6794400E17A9F /* PersistantContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544FBA925E6794400E17A9F /* PersistantContainer.swift */; };
+		B544FBB525E7D9FB00E17A9F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544FBB425E7D9FB00E17A9F /* Home.swift */; };
+		B544FBBD25E7F82D00E17A9F /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544FBBC25E7F82D00E17A9F /* AddItem.swift */; };
+		B544FBC225E7FB6F00E17A9F /* ViewMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544FBC125E7FB6F00E17A9F /* ViewMemo.swift */; };
+		B5F477DB25E91FE300585DB4 /* DeleteMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F477DA25E91FE300585DB4 /* DeleteMemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +82,12 @@
 		B544FB8E25E6773500E17A9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B544FB9025E6773500E17A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B544FB9125E6773500E17A9F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B544FBA325E677DB00E17A9F /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
+		B544FBA925E6794400E17A9F /* PersistantContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantContainer.swift; sourceTree = "<group>"; };
+		B544FBB425E7D9FB00E17A9F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B544FBBC25E7F82D00E17A9F /* AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
+		B544FBC125E7FB6F00E17A9F /* ViewMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMemo.swift; sourceTree = "<group>"; };
+		B5F477DA25E91FE300585DB4 /* DeleteMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 		B544FB6525E6773300E17A9F = {
 			isa = PBXGroup;
 			children = (
+				B544FBA825E678FE00E17A9F /* Shared */,
 				B544FB7425E6773300E17A9F /* MemoAppAppleWatch WatchKit App */,
 				B544FB8025E6773400E17A9F /* MemoAppAppleWatch WatchKit Extension */,
 				B544FB6D25E6773300E17A9F /* Products */,
@@ -139,6 +152,43 @@
 				B544FB8E25E6773500E17A9F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B544FBA825E678FE00E17A9F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B544FBB325E7D9D900E17A9F /* ViewModel */,
+				B544FBB225E7D9D000E17A9F /* Model */,
+				B544FBB125E7D9B000E17A9F /* View */,
+				B544FBA225E677DB00E17A9F /* Task.xcdatamodeld */,
+				B544FBA925E6794400E17A9F /* PersistantContainer.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B544FBB125E7D9B000E17A9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B544FBB425E7D9FB00E17A9F /* Home.swift */,
+				B544FBBC25E7F82D00E17A9F /* AddItem.swift */,
+				B544FBC125E7FB6F00E17A9F /* ViewMemo.swift */,
+				B5F477DA25E91FE300585DB4 /* DeleteMemo.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B544FBB225E7D9D000E17A9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B544FBB325E7D9D900E17A9F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,11 +317,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B544FBA425E677DB00E17A9F /* Task.xcdatamodeld in Sources */,
 				B544FB8625E6773400E17A9F /* NotificationController.swift in Sources */,
 				B544FB8425E6773400E17A9F /* ContentView.swift in Sources */,
+				B5F477DB25E91FE300585DB4 /* DeleteMemo.swift in Sources */,
 				B544FB8A25E6773500E17A9F /* ComplicationController.swift in Sources */,
 				B544FB8225E6773400E17A9F /* MemoAppAppleWatchApp.swift in Sources */,
+				B544FBBD25E7F82D00E17A9F /* AddItem.swift in Sources */,
+				B544FBC225E7FB6F00E17A9F /* ViewMemo.swift in Sources */,
 				B544FB8825E6773400E17A9F /* NotificationView.swift in Sources */,
+				B544FBB525E7D9FB00E17A9F /* Home.swift in Sources */,
+				B544FBAA25E6794400E17A9F /* PersistantContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +615,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B544FBA225E677DB00E17A9F /* Task.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B544FBA325E677DB00E17A9F /* Task.xcdatamodel */,
+			);
+			currentVersion = B544FBA325E677DB00E17A9F /* Task.xcdatamodel */;
+			path = Task.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B544FB6625E6773300E17A9F /* Project object */;
 }

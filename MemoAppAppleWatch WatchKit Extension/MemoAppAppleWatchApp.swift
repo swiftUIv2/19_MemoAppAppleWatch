@@ -9,11 +9,16 @@ import SwiftUI
 
 @main
 struct MemoAppAppleWatchApp: App {
+    
+    let container = PersistentController.shared.container
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
+                   
             }
+            .environment(\.managedObjectContext, container.viewContext)
         }
 
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
